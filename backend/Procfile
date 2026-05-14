@@ -1,1 +1,1 @@
-web: python manage.py migrate && python manage.py createsuperuser --noinput || true && python manage.py seed && gunicorn panas_backend.wsgi
+web: python manage.py migrate && python manage.py createsuperuser --noinput || true && python manage.py seed && python manage.py collectstatic --noinput && gunicorn panas_backend.wsgi
